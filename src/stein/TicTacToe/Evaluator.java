@@ -18,7 +18,6 @@ public class Evaluator {
 		Location loc2;
 		Location loc3;
 		loc = new ArrayList<Location>();
-		boolean won = false;
 		do {
 			for (int i = 0; i < 3; i++) {
 				int j = 0;
@@ -32,7 +31,6 @@ public class Evaluator {
 					loc.add(loc2);
 					loc.add(loc3);
 					winner = board.getSquare(loc1);
-					won = true;
 					return;
 				}
 				loc1 = new Location(i,j);
@@ -45,7 +43,6 @@ public class Evaluator {
 					loc.add(loc2);
 					loc.add(loc3);
 					winner = board.getSquare(loc1);
-					won = true;
 					return;
 
 				}
@@ -60,7 +57,6 @@ public class Evaluator {
 				loc.add(loc2);
 				loc.add(loc3);
 				winner = board.getSquare(loc1);
-				won = true;
 				return;
 			}
 			loc1 = new Location(0, 2);
@@ -73,11 +69,9 @@ public class Evaluator {
 				loc.add(loc2);
 				loc.add(loc3);
 				winner = board.getSquare(loc1);
-				won = true;
 				return;
 			}
-			won = true;
-		} while (won = false);
+		} while (false);
 	}
 
 	public Symbol getWinner() {

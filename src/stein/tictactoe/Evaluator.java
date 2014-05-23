@@ -1,4 +1,4 @@
-package stein.TicTacToe;
+package stein.tictactoe;
 
 
 import java.util.ArrayList;

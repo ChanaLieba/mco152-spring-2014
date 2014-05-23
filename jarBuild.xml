@@ -1,0 +1,28 @@
+<project name = "antsimple" default="dist-src">
+
+	<target name="dist-src">
+
+		<!--delete file = "stein.zip"/! -->
+		<jar jarfile="SteinEarthquake.jar">
+
+			<zipgroupfileset dir="libs" includes="**/*.jar" />
+
+			<manifest>
+
+				<attribute name="Main-Class" value="stein.weathermap.ShowEarthquakes" />
+
+			</manifest>
+
+			<fileset dir="./bin">
+
+				<include name="stein/earthqakes/*.class" />
+				<include name="stein/earthquakes/*.txt" />
+
+
+			</fileset>
+
+		</jar>
+
+	</target>
+
+</project>

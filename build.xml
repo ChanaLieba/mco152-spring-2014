@@ -1,0 +1,25 @@
+<project default="dist-src">
+
+	<target name="dist-src">
+
+		<!--delete file = "stein.zip"/!-->
+		
+		<zip file="stein.zip">
+
+			<fileset dir="src">
+
+				<include name="**/*" />
+
+			</fileset>
+
+			<fileset dir="test">
+
+				<include name="**/*" />
+
+			</fileset>
+
+		</zip>
+
+	</target>
+
+</project>
